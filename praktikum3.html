@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Forms Bootstrap</title>
+  </head>
+  <body class="bg-light">
+
+    <div class="container">
+        <h2 class="alert alert-success text-center mt-4">FORMULIR PENDAFTARAN</h2>
+          <form class="needs-validation" novalidate id="pendaftaran" name="pendaftaran" action="scriptphp.php" method="post">
+            
+            <div class="form-group">
+             <label for="namalengkap">Nama Lengkap</label>
+             <input type="text" name="namalengkap" class="form-control" placeholder="Masukkan Nama Lengkap Anda" id="namalengkap" required>
+             <div class="invalid-feedback">
+              Valid name is required.
+             </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstname">Nama Depan</label>
+                <input type="text" name="namadepan" class="form-control" id="firstname" placeholder="Masukkan Nama Depan Anda" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastname">Nama Belakang</label>
+                <input type="text" name="namabelakang" class="form-control" id="lastname" placeholder="Masukkan Nama Belakang Anda" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="d-block my-3">
+              <label>Jenis Kelamin</label>
+              <div class="custom-control custom-radio">
+                <input id="lakilaki" name="paymentMethod" type="radio" class="custom-control-input" value="lakilaki" required>
+                <label class="custom-control-label" for="lakilaki">Laki-Laki</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="perempuan" name="paymentMethod" type="radio" class="custom-control-input" value="perempuan" required>
+                <label class="custom-control-label" for="perempuan">Perempuan</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="lainnya" name="paymentMethod" type="radio" class="custom-control-input" value="lainnya" checked required>
+                <label class="custom-control-label" for="lainnya">Lainnya</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" name="username" class="form-control" id="username" placeholder="username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="kotaasal">Kota Asal</label>
+                  <input type="text" name="kotaasal" class="form-control" placeholder="Nama Kota Asal" id="kotaasal" required>
+                  <div class="invalid-feedback">
+                    Your City is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="tanggallahir">Tanggal Lahir</label>
+                  <input type="date" name="tanggallahir" class="form-control" id="tanggallahir" required>
+                  <div class="invalid-feedback">
+                    Your birth date is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Alamat</label>
+              <input type="text" name="address" class="form-control" id="address" placeholder="Alamat Tempat Tinggal" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="jenistempat">Jenis Tempat Tinggal</label>
+                <select class="custom-select d-block w-100" name="jenistempat" id="jenistempat" required>
+                  <option value="">Pilih...</option>
+                  <option>Rumah Orang Tua</option>
+                  <option>Rumah Wali</option>
+                  <option>Kost</option>
+                </select>
+            </div>
+
+            <div class="row">
+              <div class="col-md-7 mb-3">
+                <label for="jurusan">Jurusan</label>
+                <select class="custom-select d-block w-100" name="jurusan" id="jurusan" required>
+                  <option value="">Pilih Jurusan...</option>
+                  <option>Administrasi Bisnis</option>
+                  <option>Akuntansi</option>
+                  <option>Teknik Elektro</option>
+                  <option>Teknik Mesin</option>
+                  <option>Teknik Sipil</option>
+                  <option>Teknik Kimia</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid department.
+                </div>
+              </div>
+              <div class="col-md-5 mb-3">
+                <label for="angkatan">Tahun Angkatan</label>
+                <select class="custom-select d-block w-100" name="angkatan" id="angkatan" required>
+                  <option value="">Pilih tahun angkatan...</option>
+                  <option>2017</option>
+                  <option>2018</option>
+                  <option>2019</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+            <button id="create" name="action" value="create" class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+			<button id="read" name="action" value="read" class="btn btn-info btn-lg btn-block" type="submit">Read Data</button>
+			<button id="update" name="action" value="update" class="btn btn-primary btn-lg btn-block" type="submit">Update Data</button>
+			<button id="delete" name="action" value="delete" class="btn btn-info btn-lg btn-block" type="submit">Delete Data</button>
+          </form>
+	 <div id="result"></div>
+     </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+	<script>
+	
+	$("#pendaftaran").submit(kirimdata);
+	function kirimdata(e){
+		var dataaction = $("#pendaftaran").find("button[type=submit]:focus").attr("id");
+		var strformencoded = $("#pendaftaran").serialize();
+		
+		$("#result").text(strformencoded);
+		
+		var arrayform = $("#pendaftaran").serializeArray();
+		console.log(arrayform);
+
+		$.post("scriptphp.php",{action: dataaction ,dataku : strformencoded}, function(output){
+		alert(output);
+		$("#result").html(output);
+		});
+		return false;
+	}
+  </script>
+  </body>
+
+</html>
